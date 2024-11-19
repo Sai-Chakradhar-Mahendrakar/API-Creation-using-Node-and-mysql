@@ -71,3 +71,45 @@ The server will be running at http://localhost:3000.
     "userId": 1
 }
 ```
+
+### Get All Users
+
+**GET** `/users`
+
+**Response:**
+```json
+[
+    {
+        "id": 1,
+        "name": "Chakradhar",
+        "email": "chakradhar@example.com",
+        "dob": "2000-01-01"
+    },
+    ...
+]
+```
+
+### Udate User
+
+**PATCH** `/updateUsers/:id`
+
+**Request Body:**
+```json
+{
+    "name": "Updated Name",
+    "email": "updatedemail@example.com"
+}
+```
+
+**Response:**
+```json
+{
+    "message": "User updated successfully"
+}
+```
+
+## Technologies Used
+- Node.js
+- Express.js
+- MySQL
+- MySQL2 package
